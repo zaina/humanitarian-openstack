@@ -1,0 +1,57 @@
+2014 GHC OpenSource Day - Volunteer Packet
+
+Grace Hopper Open Source Day will include a Code-a-thon for Humanity, where attendees will collaboratively write code to help make the world a better place. This event, open to all skill and experience levels, will engage members of the open source community.
+Details about the GHC open source day :   
+http://systers.org/systers-dev/doku.php/ghc13FAQ
+ http://opensource.com/life/13/6/grace-hopper-event-2013
+
+Two categories:
+    1. Code hackathon
+    2. 101 workshop
+
+Event Agenda:
+12.30 pm - 6.30pm
+12.30 - 1 pm - Introduction/ what is cloud/what is openstack
+1 - 1.30 pm - humanitarian apps/ Disaster recovery activity (tech in the disaster recovery/humanitarian world)
+1:30pm - 1.40 - how is today going to work logistics - divide into groups. volunteer head for each group
+  - two tracks - one deploying application on a server, two is orchestration of servers using scripts
+  - for second track have servers with application already deployed.
+  - people split into groups of five each having a volunteer head
+  - people have cards maybe with level of expertise and skills filled out before the conference and already have predefined groups to split people into.
+1.40 - 1.50 - break and rearrangement
+6 - 6.30 demo
+
+Volunteer Responsibilities:
+
+There will be two types of volunteers:
+Floating volunteer type: 
+Duties: 
+help with the room setup / necessary equipment checklist,
+rearrangements before and after presentation/learning sesssions, 
+demo schedule,
+any other on the spot requirements,
+Will need a sub-set of the floating volunteers to distribute the participants into pre-defined groups based on their skills and background by Oct 3 EOD (each group should have a mixed skill type)
+Agenda Hand outs - preparation and distribution
+Group Leader volunteer type: 
+Duties: 
+Deploy the sample application yourself (point of contact - Dana) / write/test scripts for server orchestration (point of contact - Iccha) and perform rigorous testing by Sept 30 EOD.
+Have a separate etherpad for issues you observed while testing each track project. Help fix/ notify the point of contact about the same, improvize by Oct 4.
+Have a working demo of the project ready on your laptop in case it is needed.
+Help prepare/improvize the hand-out to be distributed to participants with all the necessary instructions (needs to be given to each group on that day and content will depend upon Track type)
+Include all the necessary accounts that need to be created by each team member/group before the start of the project.
+Include a list of all the dependent packages that need to be installed for each Track type. 
+Include the objective , process flow , requirements , use cases 
+General workflow for participants would be creation of a github repo and then contributing to it in the course of the project. 
+Gather feedback about the session from the group - have a list of survey questions prepared for this beforehand - group leaders would need to co-ordinate and frame the feedback survey.
+
+
+The volunteers would be required to assist before, during and after the event on Oct 8 from 10.30 am to 7pm. Hence, make sure you sign up only if you are free between those times on that day.
+Send in your choice of volunteer type by Sept 26 EOD. If you choose to be a group leader, please include the track type you are interested in. 
+
+Useful links:
+    Repo for opensource day: https://github.com/rackerlabs/humanitarian-openstack
+    repo for multicloud workshop: https://github.com/rackerlabs/multi-cloud-workshop
+    multicloud presentation: http://rackerlabs.github.io/multi-cloud-workshop/presentation/#/
+    crisis-net api: http://crisis.net/
+    shareabouts: http://openplans.org/shareabouts/ & https://github.com/openplans/shareabouts-api
+    Humanitarian response 101: humanitarianresponse.info, humanitarian.mit.edu
