@@ -1,0 +1,6 @@
+There are different types of architecture models you could use for building
+a fault tolerant architecture. Below are a few examples for to try out:
+1. Two web servers with a HA Proxy Load Balancer
+2. Two web servers with a HA Proxy Load Balancer and a Database Server
+3. Two web servers with a HA Proxy Load Balancer and 2 Database Servers with a HA Proxy Load Balancers
+4. A web server with a Database Server with data backup in Cloud Files
