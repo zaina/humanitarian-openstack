@@ -10,11 +10,10 @@ from oslogger import log
 
 class Server(object):
 
-    def __init__(self, name, config, deploy_name=None):
+    def __init__(self, config, deploy_name=None):
         self.config = config
         self.deploy_name = deploy_name
         self.compute = self.get_driver()
-        self.name = name
 
     def get_driver(self):
         # Get the compute driver we want to connect to, then pass in credentials.
@@ -52,18 +51,21 @@ class Server(object):
 
         return key_name
 
-    def create_node(self):
-        """Create a compute node with a given name and configuration information.
-        Return the Node object."""
-
+    def deployment_script(self):
         # Once the node is built, it'll be a bare image. Run the configured
         # bootstrap script using libcloud's ScriptDeployment to run the system
         # updates and install Flask.
         if self.deploy_name:
             deployment = ScriptFileDeployment(self.config[self.deploy_name])
             log.info("Created ScriptFileDeployment with %s file.", self.deploy_name)
-        else:
-            raise Exception("Unable to determine deployment.")
+
+        return deployment
+
+    def create_node(self, name):
+        """Create a compute node with a given name and configuration information.
+        Return the Node object."""
+        
+        deployment = self.deployment_script()
 
         # Find the size and image we want to use when creating our node.
         # The following iterates through lists of sizes and images and finds
@@ -82,12 +84,12 @@ class Server(object):
         # the paramiko SSH client must know the private key, specified in
         # `ssh_key`. `ex_keyname` is the public key we paired up above.
         key_name = self.pair_ssh_key()
-        node = self.compute.deploy_node(name=self.name, image=image, size=size,
+        node = self.compute.deploy_node(name=name, image=image, size=size,
                     deploy=deployment,
                     ssh_key=self.config["private_key"],
                     ssh_username=self.config["ssh_user"],
                     ex_keyname=key_name,
-                    timeout=250)
+                    timeout=600)
         log.info("Node deployed: %s", node)
 
         return node
