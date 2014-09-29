@@ -17,7 +17,7 @@ class HAProxyServer(Server):
         return "".join(lines)
 
     def deployment_script(self):
-        haproxy_config = prepare_haproxy_config(self.config["haproxy"], self.nodes)
+        haproxy_config = self.prepare_haproxy_config(self.config["haproxy"], self.nodes)
         # Insert the haproxy.cfg file into the deployment script.
         haproxy_deploy = open(self.config["haproxy_deploy"], "r").read()
         script = haproxy_deploy % ({"config" : haproxy_config})
