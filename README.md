@@ -1,11 +1,13 @@
 humanitarian-openstack
 ======================
-* volunteer_packet.txt - Instructions for volunteers
+* volunteers/
+  * volunteer_packet.txt- Instructions for volunteers
 
 * usercases.txt - Example usecases to implement for building fault tolerant, scalable architectures
 
   
-* code/ 
+* participants/
+  * code/ 
   
   deployment/ - Contains scripts to deploy webservers, databases, haproxy
   
