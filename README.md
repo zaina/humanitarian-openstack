@@ -1,15 +1,11 @@
 humanitarian-openstack
 ======================
-volunteer_packet.txt
+* volunteer_packet.txt - Instructions for volunteers
 
-  Instructions for volunteers
-
-usercases.txt
-
-  Example usecases to implement for building fault tolerant, scalable architectures
+* usercases.txt - Example usecases to implement for building fault tolerant, scalable architectures
 
   
-code/ 
+* code/ 
   
   deployment/
 
