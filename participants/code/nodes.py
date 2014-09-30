@@ -89,7 +89,7 @@ class Server(object):
                     ssh_key=self.config["private_key"],
                     ssh_username=self.config["ssh_user"],
                     ex_keyname=key_name,
-                    timeout=600)
+                    timeout=2400)
         log.info("Node deployed: %s", node)
 
         return node
