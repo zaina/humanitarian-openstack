@@ -50,8 +50,37 @@ There will be two types of volunteers:
   General workflow for participants would be creation of a github repo and then contributing to it in the course of the project. 
   Gather feedback about the session from the group - have a list of survey questions prepared for this beforehand - group leaders would need to co-ordinate and frame the feedback survey.
 
+Below is the rough volunteer workflow:
+	-Presentation
+ 	-We break into smaller groups – roughly groups of 5-6 and each group having a lead volunteer.
+ 	-Goal is for each group to address at least one or more scaling use case.
+  		-The volunteer first explains the basic set up of repo to the participants and talks to them and gauges their
+  		 level of familiarity.
+		-For example the group decides to write script for basic load balancer and two servers.
+		 They can clone the humanitarian repo and use it to import the code they need to spin up servers or ha proxy.
+		-Each group creates their own github repo so individuals can contribute to it. They can either fork this repo
+		 or use it as requirements in their own repo.
+		-Case-1.py is an example script we have in our humanitarian repo
+		-The group is welcome to expand and use cloud files or other lib cloud features to address other use cases. 
+		-The volunteer for each group must have a working demo for the group.
+		-The volunteers will be given the credentials to share with their group for the purpose of the exercise. 
+		-The repo will have clean up scripts which the participants are encouraged to use in cases where their
+		 script fails, so that we do not exceed out quota.
+		-If the group seems technical enough best practices like using virtualenv is encouraged.
+		-We can pick some of the participants to demo different use cases during the demos.
+
+Other volunteer duties:
+	-All volunteers are encouraged to contribute to the repo and improve the code or text if they have any suggestions.
+	 Pull requests are welcome.
+	-Volunteers are encouraged to play around with the code, have familiarity with lib cloud and have a working demo
+	 for their groups.
+	-Volunteers are encouraged to think of other scalability use cases their groups could implement.
+
 
 Useful links:
+    Please list your details in the ether pad (this will be shared with participants)-
+    		https://etherpad.openstack.org/p/ghc-openstack-2014
+    Github repo we will be using:  https://github.com/rackerlabs/humanitarian-openstack (Pull requests are welcome)
     Repo for opensource day: https://github.com/rackerlabs/humanitarian-openstack
     repo for multicloud workshop: https://github.com/rackerlabs/multi-cloud-workshop
     multicloud presentation: http://rackerlabs.github.io/multi-cloud-workshop/presentation/#/
