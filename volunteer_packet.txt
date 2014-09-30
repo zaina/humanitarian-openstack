@@ -5,22 +5,28 @@ Details about the GHC open source day :
 http://systers.org/systers-dev/doku.php/ghc13FAQ
  http://opensource.com/life/13/6/grace-hopper-event-2013
 
-Two categories:
-    1. Code hackathon
-    2. 101 workshop
 
 Event Agenda:
- 12.30 pm - 6.30pm
- 12.30 - 1 pm - Introduction/ what is cloud/what is openstack
- 1 - 1.30 pm - humanitarian apps/ Disaster recovery activity (tech in the disaster recovery/humanitarian world)
- 1:30pm - 1.40 - how is today going to work logistics - divide into groups. volunteer head for each group
-  - two tracks - one deploying application on a server, two is orchestration of servers using scripts
-  - for second track have servers with application already deployed.
-  - people split into groups of five each having a volunteer head
-  - people have cards maybe with level of expertise and skills filled out before the conference and already have predefined groups to split people into.
- 1.40 - 1.50 - break and rearrangement
- 6 - 6.30 demo
-
+TIME		 DURATION PERSON 	NOTES
+12:30PM 	00:01:00 Stuti Badoni 	Welcome Attendees & Introduce Sponsors
+12:31PM-12:33PM 00:02:00 RedHat 	Sponsor Remarks
+12:33PM-12:35PM 00:02:00 GitHub 	Sponsor Remarks
+12:35PM-12:37PM 00:02:00 Google 	Sponsor Remarks
+12:37PM-12:38PM 00:01:00 Stuti Badoni 	Introduce Co-Chairs, Bithika and Aakriti, Invite OSD co-chairs on stage
+12:38PM-12:47PM 00:09:00 Bithika,Aakriti Describe how OSD will play out (projects, where to go, introduce Facilitators),Set expecations on how the day will go; invite each project coo-ordinator to give the audience a brief description of their project
+--------------------------------------------------------------------------------
+12:47PM-1:00PM 	00:13:00 		Introduction/what is cloud/what is openstack
+1:00PM-1:15PM	00:15:00		Disaster recovery architectures
+1:15PM-1:30PM	00:15:00		Demo and logistics of how today is going to work. Group split up and volunteers.
+1:30PM-2:00PM 	00:30:00 		Break - Rearrange into groups and settle in (Official break is 30 min but ask 
+					participants if they can be back sooner to get set up)
+2:00PM-3:30PM 	01:30:00 		Volunteers explain code base to partipants. Team creates github repo.
+					Tries to run case-1.py. Then picks another usecase to implement.
+3:30PM-4:00PM 	00:30:00 		Break
+4:00PM-5:10PM 	01:10:00 		All Coding
+5:10PM-5.30PM	00:20:00		Demo prep
+--------------------------------------------------------------------------------
+5:30PM-6:30PM 	01:00:00 		All Demo, Wrap up and next steps
 Volunteer Responsibilities:
 
 There will be two types of volunteers:
@@ -44,11 +50,6 @@ There will be two types of volunteers:
   General workflow for participants would be creation of a github repo and then contributing to it in the course of the project. 
   Gather feedback about the session from the group - have a list of survey questions prepared for this beforehand - group leaders would need to co-ordinate and frame the feedback survey.
 
-
-The volunteers would be required to assist before, during and after the event on Oct 8 from 10.30 am to 7pm. 
-Hence, make sure you sign up only if you are free between those times on that day.
-Send in your choice of volunteer type by Sept 26 EOD. 
-If you choose to be a group leader, please include the track type you are interested in. 
 
 Useful links:
     Repo for opensource day: https://github.com/rackerlabs/humanitarian-openstack
