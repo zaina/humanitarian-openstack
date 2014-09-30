@@ -7,17 +7,11 @@ humanitarian-openstack
   
 * code/ 
   
-  deployment/
-
-    Contains scripts to deploy webservers, databases, haproxy
+  deployment/ - Contains scripts to deploy webservers, databases, haproxy
   
-  libcloud.conf
-
-    Template file to include cloud provider details for libcloud
+  libcloud.conf - Template file to include cloud provider details for libcloud
   
-  case-1.py
-
-    Implements code for usecase - 2 webservers with a load balancer and a database node
+  case-1.py - Implements code for usecase - 2 webservers with a load balancer and a database node
     
   To run the code:
 
