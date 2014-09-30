@@ -43,13 +43,9 @@ There will be two types of volunteers:
   Deploy the sample application yourself (point of contact - Dana) / write/test scripts for server orchestration (point of contact - Iccha) and perform rigorous testing by Sept 30 EOD.
   Have a separate etherpad for issues you observed while testing each track project. Help fix/ notify the point of contact about the same, improvize by Oct 4.
   Have a working demo of the project ready on your laptop in case it is needed.
-  Help prepare/improvize the hand-out to be distributed to participants with all the necessary instructions (needs to be given to each group on that day and content will depend upon Track type)
-  Include all the necessary accounts that need to be created by each team member/group before the start of the project.
   Include a list of all the dependent packages that need to be installed for each Track type. 
-  Include the objective , process flow , requirements , use cases 
   General workflow for participants would be creation of a github repo and then contributing to it in the course of the project. 
-  Gather feedback about the session from the group - have a list of survey questions prepared for this beforehand - group leaders would need to co-ordinate and frame the feedback survey.
-
+ 
 Below is the rough volunteer workflow:
 	-Presentation
  	-We break into smaller groups – roughly groups of 5-6 and each group having a lead volunteer.
@@ -62,6 +58,8 @@ Below is the rough volunteer workflow:
 		 or use it as requirements in their own repo.
 		-Case-1.py is an example script we have in our humanitarian repo
 		-The group is welcome to expand and use cloud files or other lib cloud features to address other use cases. 
+		-Encourage participants to test the use cases, for example by deleting server-1, show that the load balance
+		 ip still loads because server-2 is running.
 		-The volunteer for each group must have a working demo for the group.
 		-The volunteers will be given the credentials to share with their group for the purpose of the exercise. 
 		-The repo will have clean up scripts which the participants are encouraged to use in cases where their
