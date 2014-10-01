@@ -19,7 +19,7 @@ humanitarian-openstack
 
     1. Set credentials in libcloud.conf
 
-    2. Create a venv (optional)
+    2. Create a venv - http://docs.python-guide.org/en/latest/starting/install/linux/#virtualenv (optional)
     
     3. pip install -r participants/code/requirements.txt
     
