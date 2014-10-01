@@ -4,8 +4,8 @@ web_deployment = deployment/web.deploy
 haproxy = deployment/haproxy.cfg
 haproxy_deploy = deployment/haproxy.deploy
 db_deployment = deployment/db.deploy
-private_key = keys/multi-cloud-workshop
-public_key = keys/multi-cloud-workshop.pub
+private_key = keys/humanitarian
+public_key = keys/humanitarian.pub
 
 [rackspace]
 identity = 
