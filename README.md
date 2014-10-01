@@ -19,6 +19,10 @@ humanitarian-openstack
 
     1. Set credentials in libcloud.conf
 
-    2. Run python case-1.py
+    2. Create a venv (optional)
+    
+    3. pip install -r participants/code/requirements.txt
+    
+    4. Run python case-1.py
 
     Build your own use cases and try them!
