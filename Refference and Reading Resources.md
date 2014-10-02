@@ -22,6 +22,6 @@ https://libcloud.apache.org/:
 ##### Other Useful Links:
 Github repo:  https://github.com/rackerlabs/humanitarian-openstack
 
-#### Rackspace Cloud Control Panel
+##### Rackspace Cloud Control Panel:
 https://mycloud.rackspace.com/
 
