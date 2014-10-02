@@ -1,5 +1,7 @@
 humanitarian-openstack
 ======================
+* [Workshop Requirements](https://github.com/rackerlabs/humanitarian-openstack/blob/master/Workshop%20Requirements.md): minimal requirements for running examples
+* [Reference and Reading Resources] (https://github.com/rackerlabs/humanitarian-openstack/blob/master/Refference%20and%20Reading%20Resources.md): find out more about python, OpenStack, GitHub, etc.
 * volunteers/
   * volunteer_packet.txt- Instructions for volunteers
 
