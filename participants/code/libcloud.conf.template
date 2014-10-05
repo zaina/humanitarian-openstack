@@ -10,7 +10,7 @@ public_key = keys/humanitarian.pub
 [rackspace]
 identity = 
 credential = 
-region = iad
+region = ord
 compute_driver = rackspace
 lb_driver = rackspace
 image = Ubuntu 12.04 LTS (Precise Pangolin)
