@@ -22,11 +22,11 @@ class Server(object):
 
         identity = self.config["identity"]
         credential = self.config["credential"]
-        region = self.config["region"]
-        compute = ComputeDriver(identity, credential, region)
-        
+        rgn = self.config["region"]
+
+        compute = ComputeDriver(identity, credential, region=rgn)
         log.info("Created a %s compute driver in the %s region.",
-                 compute_driver, region)
+                 compute_driver, rgn)
         return compute
 
     def pair_ssh_key(self):
@@ -84,12 +84,15 @@ class Server(object):
         # the paramiko SSH client must know the private key, specified in
         # `ssh_key`. `ex_keyname` is the public key we paired up above.
         key_name = self.pair_ssh_key()
+        self.compute.region = self.config["region"]
+
         node = self.compute.deploy_node(name=name, image=image, size=size,
                     deploy=deployment,
                     ssh_key=self.config["private_key"],
                     ssh_username=self.config["ssh_user"],
                     ex_keyname=key_name,
-                    timeout=2400)
+                    ssh_timeout=6400,
+                    timeout=6400)
         log.info("Node deployed: %s", node)
 
         return node
