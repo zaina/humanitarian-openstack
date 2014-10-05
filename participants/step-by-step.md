@@ -94,3 +94,10 @@ Troubleshooting
 If you immediately get a credential error, double-check the settings in 'libcloud.conf'. 
 
 If one of your servers fails to build, you just have to try again. Sometimes switching the region setting in the libcloud .deploy files will help as some data centers could be more available than others at any given time. The available regions are IAD, DFW, and ORD in North America. These are best for the workshop as the latency across the oceans would slow you down.
+
+If you have issues while installing paramiko using pip (in Mac or Linux), build it from the source.
+	- Download and untar the file (.tar.gz) in this link - https://pypi.python.org/pypi/paramiko/1.15.1
+	- In the paramiko-1.15.1 directory, run:
+	  ```
+	  sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future easy_install ./
+	  ```
