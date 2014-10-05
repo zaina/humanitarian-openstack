@@ -3,7 +3,7 @@
 Grace Hopper Open Source Day will include a Code-a-thon for Humanity, where attendees will collaboratively write code to help make the world a better place. This event, open to all skill and experience levels, will engage members of the open source community.
 Details about the GHC open source day :   
 http://systers.org/systers-dev/doku.php/ghc13FAQ
- http://opensource.com/life/13/6/grace-hopper-event-2013
+http://opensource.com/life/13/6/grace-hopper-event-2013
 
 
 Event Agenda:
@@ -27,6 +27,7 @@ TIME		 DURATION PERSON 	NOTES
 5:10PM-5.30PM	00:20:00		Demo prep
 --------------------------------------------------------------------------------
 5:30PM-6:30PM 	01:00:00 		All Demo, Wrap up and next steps
+
 Volunteer Responsibilities:
 
 There will be two types of volunteers:
@@ -40,10 +41,9 @@ There will be two types of volunteers:
 
  Group Leader volunteer type: 
  Duties:
-  Deploy the sample application yourself (point of contact - Dana) / write/test scripts for server orchestration (point of contact - Iccha) and perform rigorous testing by Sept 30 EOD.
+  Deploy the sample Ushahidi application using Heat (point of contact - Egle) / write/test scripts for server orchestration (point of contact - Iccha) and perform rigorous testing by Sept 30 EOD.
   Have a separate etherpad for issues you observed while testing each track project. Help fix/ notify the point of contact about the same, improvize by Oct 4.
   Have a working demo of the project ready on your laptop in case it is needed.
-  Include a list of all the dependent packages that need to be installed for each Track type. 
   General workflow for participants would be creation of a github repo and then contributing to it in the course of the project. 
  
 Below is the rough volunteer workflow:
@@ -79,9 +79,4 @@ Useful links:
     Please list your details in the ether pad (this will be shared with participants)-
     		https://etherpad.openstack.org/p/ghc-openstack-2014
     Github repo we will be using:  https://github.com/rackerlabs/humanitarian-openstack (Pull requests are welcome)
-    Repo for opensource day: https://github.com/rackerlabs/humanitarian-openstack
-    repo for multicloud workshop: https://github.com/rackerlabs/multi-cloud-workshop
-    multicloud presentation: http://rackerlabs.github.io/multi-cloud-workshop/presentation/#/
-    crisis-net api: http://crisis.net/
-    shareabouts: http://openplans.org/shareabouts/ & https://github.com/openplans/shareabouts-api
-    Humanitarian response 101: humanitarianresponse.info, humanitarian.mit.edu
+
