@@ -1,0 +1,98 @@
+---
+- name: Build environment
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: Create a Load Balancer 
+      local_action:
+        module: rax_clb
+        credentials: ~/.raxpub
+        name: clb
+        port: 80
+        protocol: HTTP
+        algorithm: ROUND_ROBIN
+        type: PUBLIC
+        timeout: 30
+        region: IAD
+        wait: yes
+        state: present
+      register: clb
+
+    - debug: msg="Load Balancer VIP {{ clb.balancer['virtual_ips'] }}"
+      when: clb is defined
+
+    - name: Create a Network 
+      local_action:
+        module: rax_network
+        credentials: ~/.raxpub
+        label: web-nodes
+        cidr: 192.168.3.0/24
+        state: present
+        region: IAD
+      register: network
+
+    - name: Create Servers
+      local_action:
+        module: rax
+        credentials: ~/.raxpub
+        name: web%04d.example.org
+        flavor: performance1-1
+        image: ubuntu-1204-lts-precise-pangolin
+        disk_config: manual
+        networks:
+          - public
+          - private
+          - web-nodes
+        region: IAD
+        state: present
+        count: 2
+        exact_count: yes
+        group: web
+        wait: yes
+      register: rax
+
+    - name: Add servers to web host group
+      local_action:
+        module: add_host
+        hostname: "{{ item.name }}"
+        ansible_ssh_host: "{{ item.rax_accessipv4 }}"
+        ansible_ssh_pass: "{{ item.rax_adminpass }}"
+        ansible_ssh_user: root
+        groupname: web
+      with_items: rax.success
+      when: rax.action == 'create'
+
+    - name: Add servers to Load balancer
+      local_action:
+        module: rax_clb_nodes
+        credentials: ~/.raxpub
+        load_balancer_id: "{{ clb.balancer.id }}"
+        address: "{{ item.rax_networks.private|first }}"
+        port: 80
+        condition: enabled
+        type: primary
+        wait: yes
+        region: IAD
+      with_items: rax.success
+      when: rax.action == 'create'
+
+- name: Configure servers
+  hosts: web
+  handlers:
+    - name: restart nginx
+      service: name=nginx state=restarted
+
+  tasks:
+    - name: Install nginx
+      apt: pkg=nginx state=latest update_cache=yes cache_valid_time=86400
+      notify:
+        - restart nginx
+
+    - name: Ensure nginx starts on boot
+      service: name=nginx state=started enabled=yes
+
+    - name: Create custom index.html
+      copy: content="Hello there!" dest=/usr/share/nginx/www/index.html
+            owner=root group=root mode=0644
+
